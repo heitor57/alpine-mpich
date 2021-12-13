@@ -13,7 +13,7 @@ Provide solution for MPI Cluster Automation with Docker containers using either 
 ----
 
 Image usage instruction: 
-[https://hub.docker.com/r/nlknguyen/alpine-mpich](https://hub.docker.com/r/nlknguyen/alpine-mpich)
+[https://hub.docker.com/r/heitor57/alpine-mpich](https://hub.docker.com/r/heitor57/alpine-mpich)
 
 
 Distributed MPI cluster setup instruction: [https://github.com/NLKNguyen/alpine-mpich/tree/master/cluster](https://github.com/NLKNguyen/alpine-mpich/tree/master/cluster)  
@@ -24,13 +24,13 @@ Distributed MPI cluster setup instruction: [https://github.com/NLKNguyen/alpine-
 
 ----
 
-Automated build with Travis CI and push to Docker Hub [https://hub.docker.com/r/nlknguyen/alpine-mpich](https://hub.docker.com/r/nlknguyen/alpine-mpich/)
+Automated build with Travis CI and push to Docker Hub [https://hub.docker.com/r/heitor57/alpine-mpich](https://hub.docker.com/r/heitor57/alpine-mpich/)
 
 **TODO Feb 23, 2019**: Current failed checks are due to new style rules for shell scripts using *shellcheck* tool. All shell scripts need to be updated to pass the build. Most of shellcheck's recommendations are legit. 
 
 [![Build Status](https://travis-ci.org/NLKNguyen/alpine-mpich.svg?branch=master)](https://travis-ci.org/NLKNguyen/alpine-mpich)
 
-[![Docker Hub](http://dockeri.co/image/nlknguyen/alpine-mpich)](https://hub.docker.com/r/nlknguyen/alpine-mpich)
+[![Docker Hub](http://dockeri.co/image/heitor57/alpine-mpich)](https://hub.docker.com/r/heitor57/alpine-mpich)
 
 
 `base image` ([Dockerfile](https://github.com/NLKNguyen/alpine-mpich/blob/master/Dockerfile)) : contains MPICH and essential build tools. Intended to be used as development environment for developing MPI programs.
@@ -53,12 +53,12 @@ $ git clone https://github.com/NLKNguyen/alpine-mpich
 
 $ cd alpine-mpich
 
-$ docker build -t nlknguyen/alpine-mpich base/
+$ docker build -t heitor57/alpine-mpich base/
 
-$ docker build -t nlknguyen/alpine-mpich:onbuild onbuild/
+$ docker build -t heitor57/alpine-mpich:onbuild onbuild/
 ```
 
-Since the onbuild image inherits the base image, if you use a different tag name (`nlknguyen/alpine-mpich`), you must change the first line in `onbuild/Dockerfile` to inherits `FROM` your custom tag name.
+Since the onbuild image inherits the base image, if you use a different tag name (`heitor57/alpine-mpich`), you must change the first line in `onbuild/Dockerfile` to inherits `FROM` your custom tag name.
 
 ----
 
@@ -89,7 +89,7 @@ Should you need more than that, you need to change the Dockerfile yourself or se
 
 # Feedback
 
-Feedbacks are always welcome. For general comments, use the comment section at the bottom of this [image page](https://hub.docker.com/r/nlknguyen/alpine-mpich) on Docker Hub
+Feedbacks are always welcome. For general comments, use the comment section at the bottom of this [image page](https://hub.docker.com/r/heitor57/alpine-mpich) on Docker Hub
 
 ## Issue
 

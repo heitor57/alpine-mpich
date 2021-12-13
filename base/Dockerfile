@@ -1,9 +1,9 @@
-FROM alpine:3.4
+FROM alpine:3.15
 # In case the main package repositories are down, use the alternative base image:
 # FROM gliderlabs/alpine:3.4
 # Updated by nbp - adding ca-certs etc.
 
-MAINTAINER Nikyle Nguyen <NLKNguyen@MSN.com>
+#MAINTAINER Nikyle Nguyen <NLKNguyen@MSN.com>
 
 ARG REQUIRE="sudo build-base"
 RUN apk update && apk upgrade \

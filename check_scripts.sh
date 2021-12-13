@@ -3,8 +3,8 @@ set -e
 
 echo "---- Check shell scripts styling with ShellCheck ----"
 
-docker pull nlknguyen/alpine-shellcheck
-alias shellcheck='docker run --rm -it -v $(pwd):/mnt nlknguyen/alpine-shellcheck'
+docker pull heitor57/alpine-shellcheck
+alias shellcheck='docker run --rm -it -v $(pwd):/mnt heitor57/alpine-shellcheck'
 
 shellcheck --version
 shellcheck  **/*.sh                     \
